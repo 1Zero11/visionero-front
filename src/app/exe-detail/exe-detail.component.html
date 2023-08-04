@@ -1,0 +1,6 @@
+<section class="listing">
+    <p class="path-heading">{{ executable.path }}</p>
+    <p>{{executable.is_running ? 'Running':'Stopped' }}</p>
+    <button class="primary" type="button" (click)="turnApp()">Start/Stop</button>
+
+</section>

@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="title">
+    {{ 'PAGES.HOME.TITLE' | translate }}
+  </h1>
+  <button class="primary" type="button" (click)="stopAll()">Stop ALL</button>
+  <section class="results">
+    <app-exe-detail
+      *ngFor="let exec of pathService.receivedData"
+      [executable]="exec">
+    </app-exe-detail>
+  </section>
+  <section class="history">
+    <app-history-entry *ngFor="let entry of history" [entry]="entry">
+    </app-history-entry>
+  </section>
+</div>
